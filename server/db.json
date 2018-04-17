@@ -1,0 +1,311 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "nickname": "河道较深",
+      "password": "12345678",
+      "email": "2555555551@qq.com",
+      "phone": "126878993"
+    },
+    {
+      "id": 2,
+      "nickname": "赵薇",
+      "password": "12345678",
+      "email": "2555555552@qq.com",
+      "phone": "12687899"
+    },
+    {
+      "id": 3,
+      "nickname": "韩美",
+      "password": "12345678",
+      "email": "2555555553@qq.com",
+      "phone": "17798668"
+    },
+    {
+      "id": 4,
+      "nickname": "李校",
+      "password": "12345678",
+      "email": "2555555554@qq.com",
+      "phone": "188828878"
+    },
+    {
+      "id": 5,
+      "nickname": "gbh",
+      "email": "89",
+      "phone": "89",
+      "password": "878"
+    },
+    {
+      "id": 6,
+      "nickname": "21",
+      "email": "S",
+      "phone": "dsa",
+      "password": "sa"
+    }
+  ],
+  "book": [
+    {
+      "id": 10000,
+      "name": "JavaScript从入门到精通",
+      "price": 9990,
+      "owner_id": 10000
+    },
+    {
+      "id": 10001,
+      "name": "Java从入门到放弃",
+      "price": 1990,
+      "owner_id": 10001
+    }
+  ],"movie": [
+    {
+      "id": 1,
+      "name": "哈利波特",
+      "EnglishName": "HarryPotter",
+      "country": "美国",
+      "director": "ddd",
+      "cast": "cccccccccccccccccc",
+      "description": "哈利·波特系列电影，是由美国华纳兄弟电影公司将JK罗琳所著的同名系列小说改拍成的八部电影，由丹尼尔·雷德克里夫、艾玛·沃森及鲁伯特·格林特主演。讲述的是主人公——年轻的巫师学生哈利·波特在霍格沃茨前后六年的学习生活和冒险故事；第七部讲述的是哈利·波特在第二次巫界大战中在外寻找魂器并消灭伏地魔的故事。",
+      "poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/TYC7JSMzkeL5nxLNPemfw*E6wmL95pX5yeHOgg0txSo!/m/dDMBAAAAAAAAnull&bo=zAAsAQAAAAARB9E!&rf=photolist&t=5",
+      "beginTime": "2018-04-08",
+      "endTime": "2018-05-07",
+      "propaganda": "经典之作"
+    },
+    {
+      "name": "头号玩家",
+      "EnglishName": "touhaowanjia",
+      "director": "斯皮尔伯格",
+      "cast": "asda,sdfs,sdfasd,sdfad,",
+      "description": "asdasdfasdfasdfasdfasdfasdf",
+      "poster":"http://a3.qpic.cn/psb?/V11VAgw30oqhej/WF*z9S4NY7dtiX5Dy2DsvgsIIuNeHNDYG.1FQNW2.DQ!/m/dDIBAAAAAAAAnull&bo=DgFoAQAAAAARB1Y!&rf=photolist&t=5",
+     "beginTime": "2018-04-09",
+      "endTime": "2018-05-07",
+      "movieType": [
+        "科幻"
+      ],
+      "propaganda": "weilai",
+      "id": 2
+    },
+    {
+      "name": "烂片之王",
+      "EnglishName": "king of lanpian",
+      "director": "hhhh",
+      "cast": "aaa,bbb,ccc",
+      "description": "so boring lalalala",
+      "poster":"http://www.taopic.com/uploads/allimg/140421/318743-140421213T910.jpg",
+      "beginTime": "2018-04-08",
+      "endTime": "2018-05-07",
+      "movieType": [
+        "喜剧"
+      ],
+      "propaganda": "hhhhhhh",
+      "id": 3
+    },
+    {
+      "name": "中国散货人",
+      "EnglishName": "kkkkk",
+      "director": "潘大角",
+      "cast": "kk,kkk",
+      "description": "sascmfzdnbd",
+      "beginTime": "2018-04-10",
+      "poster":"http://img1.imgtn.bdimg.com/it/u=1709327650,2314972947&fm=27&gp=0.jpg",
+      "endTime": "2018-05-07",
+      "movieType": [
+        "剧情"
+      ],
+      "propaganda": "jiuzhoushiyidishui",
+      "id": 4
+    },
+    {
+      "name": "废柴联盟",
+      "EnglishName": "community",
+      "director": "asd",
+      "cast": "aaa,aJdsfj,asdfakj",
+      "description": "hhhhhhhhhhhhhhhhhh",
+      "beginTime": "2018-04-12",
+      "endTime": "2018-05-07",
+      "movieType": [
+        "喜剧",
+        "动画"
+      ],
+      "propaganda": "big movie!",
+      "id": 5
+    }
+  ],
+  "cinema": [
+    {
+      "id": 1,
+      "name": "地中海影城",
+      "city":"上海",
+      "location": "松江区新松江路927弄4042号开元地中海商业广场4楼"
+    },
+    {
+      "id": 2,
+      "name": "上海兰生典尚影院",
+      "city":"上海",
+      "location": "淮海中路8号 柳林路1号 兰生大厦5层"
+    },
+    {
+      "id":3,
+      "name":"SFC上影影城（唐镇阳光天地店）",
+      "city":"上海",
+      "location":"上海市浦东新区高科东路777弄1号3层L306室"
+    },
+    {
+      "id":4,
+      "name":"扬州时代广场世纪影城",
+      "city":"扬州",
+      "location":"扬州市文昌中路时代广场6楼"
+    }
+  ],
+  "Time": [
+    {
+      "id":1,
+      "startTime": "14:20",
+      "room": 8,
+      "price": 40
+    },
+    {
+    	"id":2,
+      "startTime": "15:20",
+      "room": 8,
+      "price": 40
+    },
+    {
+    	"id":3,
+      "startTime": "16:20",
+      "room": 8,
+      "price": 40
+    },
+    {
+    	"id":4,
+      "startTime": "17:20",
+      "room": 8,
+      "price": 40
+    },
+    {
+    	"id":5,
+      "startTime": "17:20",
+      "room": 8,
+      "price": 40
+    }
+  ],
+  "movie_Timelist":[
+    {
+      "mid":1,
+      "name":"哈利波特",
+      "timelist":[{
+        "startTime": "16:20",
+        "room": 8,
+        "price": 40
+      },{
+         "startTime": "17:20",
+        "room": 8,
+        "price": 40
+      },{
+        "startTime": "15:20",
+        "room": 8,
+        "price": 40
+      }]
+    },
+    {
+      "mid":2,
+      "name":"烂片之王",
+      "timelist":[{
+        "startTime": "16:20",
+        "room": 8,
+        "price": 40
+      },{
+         "startTime": "17:20",
+        "room": 8,
+        "price": 40
+      },{
+        "startTime": "15:20",
+        "room": 8,
+        "price": 40
+      }]
+    } 
+  ],
+  "room_left":[
+    {
+      "room":3,
+      "left":5
+    },
+    {
+      "room":4,
+      "left":10
+    },
+    {
+      "room":5,
+      "left":8
+    },
+     {
+      "room":6,
+      "left":9
+    }
+  ],
+  "movieshow":[
+	{
+  		"poster":"http://a3.qpic.cn/psb?/V11VAgw30oqhej/WF*z9S4NY7dtiX5Dy2DsvgsIIuNeHNDYG.1FQNW2.DQ!/m/dDIBAAAAAAAAnull&bo=DgFoAQAAAAARB1Y!&rf=photolist&t=5",
+  		"name":"头号玩家",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"动作"
+  	},
+  	{
+  		"poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/rBtfzFfm0n29djyf8bJ*NyiKECtbAz.85bVDIhevAWE!/m/dDMBAAAAAAAAnull&bo=6QN4BQAAAAARB6c!&rf=photolist&t=5",
+  		"name":"前任三",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"爱情"
+  	},
+  	{
+  		"poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/TYC7JSMzkeL5nxLNPemfw*E6wmL95pX5yeHOgg0txSo!/m/dDMBAAAAAAAAnull&bo=zAAsAQAAAAARB9E!&rf=photolist&t=5",
+  		"name":"唐人街探案",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"侦探"	
+  	},
+	{
+  		"poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/mT5czfKgF4HvwjBkqYDbqbfGxkJyl5FQSrXZN7JerIE!/m/dDMBAAAAAAAAnull&bo=WAJIAwAAAAARByE!&rf=photolist&t=5",
+  		"name":"解忧杂货店",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"冒险"	
+  	},
+	{
+  		"poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/Q5PQ238tUMHnGGOK9kqpf4Wp8jHLHPv1c2ikoN68Pl8!/m/dDMBAAAAAAAAnull&bo=OATnBQAAAAARB.4!&rf=photolist&t=5",
+  		"name":"城市之光之心理罪",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"冒险"	
+  	},
+	{
+  		"poster":"http://a1.qpic.cn/psb?/V11VAgw30oqhej/OH5phgZesYZUj*YAHGbTMnjH7excWmIi65c76L9ZhOA!/m/dEABAAAAAAAAnull&bo=rQFYAgAAAAARB8Y!&rf=photolist&t=5",
+  		"name":"怦然心动",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"爱情"	
+  	},
+	{
+  		"poster":"http://a3.qpic.cn/psb?/V11VAgw30oqhej/CSs7fU2yWTbUtXg89CM9N.N3UymK7HpByr5HGWsNtBs!/m/dFYBAAAAAAAAnull&bo=wQLoAwAAAAARBxg!&rf=photolist&t=5",
+  		"name":"捉妖记",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"爱情"	
+  	},
+	{
+  		"poster":"http://a1.qpic.cn/psb?/V11VAgw30oqhej/N6VLU2.rUZyIPQt8d2KnMI4RUBXoJu0s7z3VNJ9rBzc!/m/dEABAAAAAAAAnull&bo=kQFVAgAAAAARB*c!&rf=photolist&t=5",
+  		"name":"罗马假日",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"爱情"	
+  	},
+	{
+  		"poster":"http://a4.qpic.cn/psb?/V11VAgw30oqhej/cg1ezF8e93BhGXE6pMaVJL*1u0oRQG6vnlyp7v3foik!/m/dEMBAAAAAAAAnull&bo=OAQHBgAAAAARBw0!&rf=photolist&t=5",
+  		"name":"寻梦环游记",
+  		"score":8.3,
+  		"time":"120分钟",
+  		"kind":"爱情"	
+  	}
+  ]
+}

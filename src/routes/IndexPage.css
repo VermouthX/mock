@@ -1,0 +1,13 @@
+.font{
+  color:white;
+}
+.subMenu{
+  color: white;
+  background-color: black;
+}
+.menuBack{
+  height: 50px;
+  background-color: black;
+  padding-top: 8px;
+  border-bottom: solid 1px white; 
+}
