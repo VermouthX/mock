@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { Form, Input, Tooltip, Icon, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import request from '../utils/request';
+import {withRouter} from "react-router-dom";
+import { Form, Input, Tooltip, Icon, Select, Row, Col, Checkbox, Button, AutoComplete,message } from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -13,11 +15,25 @@ state = {
   };
   handleSubmit = (e) => {
     e.preventDefault();
+    const form = this.props.form;
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        let body={
+          name:form.getFieldValue('nickname'),
+          email:form.getFieldValue('email'),
+          password:form.getFieldValue('password'),
+          tel:form.getFieldValue('phone')
+        };
+        request('http://localhost:8080/user/register',JSON.stringify(body))
+        .then((data)=>{
+          if(data){
+            message.success('注册成功!');
+            this.props.history.push("/");
+          }
+        });
       }
-    });
+    });    
   }
   handleConfirmBlur = (e) => {
     const value = e.target.value;
@@ -138,7 +154,7 @@ state = {
           label="电话号码"
         >
           {getFieldDecorator('phone', {
-            rules: [{ required: true, message: '请输入电话号码！' }],
+            rules: [{ required: true,len:11, message: '请输入你的手机号（11位数字）！' }],
           })(
             <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
           )}
@@ -161,4 +177,4 @@ Register.contextTypes = {
   router:PropTypes.object.isRequired
 };
 Register = Form.create()(Register);
-export default Register;
+export default withRouter(Register);

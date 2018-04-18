@@ -1,19 +1,19 @@
-import fetch from 'dva/fetch';
+﻿import fetch from 'dva/fetch';
 
 function parseJSON(response) {
-  return response.json();
+  return  response.json();
 }
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
-
-    const token = response.headers.get('access-token');
+    /*const token = response.headers.get('access-token');
     if (token) {
       console.log('token: '+token);
       sessionStorage.setItem('access_token', token);
-    }
+    }*/
     return response;
   }
+  return response;
   const error = new Error(response.statusText);
   error.response = response;
   throw error;
@@ -33,12 +33,22 @@ export default function request(url,body) {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Token': sessionStorage.getItem('access_token') || '' // 从sessionStorage中获取access token
+      'Access-Token': sessionStorage.getItem('access_token') || '', // 从sessionStorage中获取access tokeness
+	  'Access-IsAdmin':sessionStorage.getItem('isAdmin')||''
     },
     body
   })
     .then(checkStatus)
     .then(parseJSON)
-    .then(data => ({ data }))
+    .then( (data) => {
+		console.log('response');
+      console.log(data);
+      let t = data.data.token
+      if(t){
+        sessionStorage.setItem('access_token', data.data.token);
+		sessionStorage.setItem('isAdmin',data.data.isAdmin);
+      }
+      return data.data.data;
+    })
     .catch(err => ({ err }));
 }

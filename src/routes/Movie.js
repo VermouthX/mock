@@ -8,7 +8,7 @@ const TabPane = Tabs.TabPane;
 const { Meta } = Card;
 
 const listData=[];
-let mlist=[];
+const mlist=[];
 listData.push({
 	src:require('../assets/thwj.jpg'),
 	title:"头号玩家",
@@ -69,7 +69,8 @@ class Movie extends React.Component{
     	Wnum:listData.length,
     	value:"更多",
     	choice:false,
-    	icon:"down-circle"
+    	icon:"down-circle",
+    	show:true
     }
   }
   onClick=()=>{
@@ -88,33 +89,40 @@ class Movie extends React.Component{
   	}
   }
   getMovieList(){
-  	fetch('http://localhost:3000/movieshow')
+  	fetch('http://localhost:8080/movie/getAll')
       .then(res => res.json())
       .then(res => {
         this.setState({
-         data: res
-        });
+         data: res.data.data
+        });        
         mlist.push(this.state.data[0]);
         let moviedata=[];
-    	for(let i=1;i<=6;i++){
+        let len=6;
+        if(this.state.data.length<=7){
+        	len=this.state.data.length-1;
+        	this.setState({
+        		show:false
+        	})
+        }
+    	for(let i=1;i<=len;i++){
     		moviedata.push(this.state.data[i]);
     	}
     	this.setState({
     		movielist:moviedata
    		}); 
-   		let getlist=[];
-   		for(let i=7;i<this.state.data.length;i++){
-   			getlist.push(this.state.data[i]);
-   		}
-   		this.setState({
-    		list:getlist
-   		});
+   		if(this.state.show){
+   			let getlist=[];
+   			for(let i=7;i<this.state.data.length;i++){
+   				getlist.push(this.state.data[i]);
+   			}
+   			this.setState({
+    			list:getlist
+   			});
+   		}   		
     });
   }
   componentWillMount(){
     this.getMovieList();
-    
-    console.log(this.state.movielist)
   }
   getNum=(e)=>{
   	this.state.Znum+=e;
@@ -178,10 +186,12 @@ class Movie extends React.Component{
 								</div>
 							</Row>
 						</div>
-						<ShowMovie choice={this.state.choice} getNum={this.getNum} data={this.state.list}/>
-						<div style={{textAlign:'center',paddingTop:'20px'}}>
-							<div onClick={this.onClick} style={{fontSize:'20px'}}><Icon type={this.state.icon} style={{color:'#1E90FF'}}/>{this.state.value}</div>
-						</div>
+						{this.state.show?<div>
+							<ShowMovie choice={this.state.choice} getNum={this.getNum} data={this.state.list}/>
+							<div style={{textAlign:'center',paddingTop:'20px'}}>
+								<div onClick={this.onClick} style={{fontSize:'20px'}}><Icon type={this.state.icon} style={{color:'#1E90FF'}}/>{this.state.value}</div>
+							</div>
+						</div>:''}
 					</div>
 				</div>
 				<div style={{padding:'20px 60px'}}>

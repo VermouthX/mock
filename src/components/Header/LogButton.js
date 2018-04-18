@@ -19,7 +19,7 @@ class LogButton extends React.Component{
 			<div>
 				<div onClick={this.showModal}>登录</div>
 				<Modal title="登录" visible={this.state.visible}  onCancel={this.hideModal}  width="350px" footer={null} destroyOnClose={true}>
-					<LogContent/>
+					<LogContent hideModal={this.hideModal} getStatus={this.props.getStatus}/>
 				</Modal>
 			</div>
 		);

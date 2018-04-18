@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import request from '../../utils/request';
+import { Form, Icon, Input, Button, Checkbox ,message} from 'antd';
 import {withRouter} from "react-router-dom";
 import styles from './LogContent.css';
 const FormItem = Form.Item;
@@ -8,9 +9,28 @@ const FormItem = Form.Item;
 class LogContent extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
+    const form = this.props.form;
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        let body={
+          email:form.getFieldValue('userName'),
+          password:form.getFieldValue('password')
+        }
+        request('http://localhost:8080/user/login',JSON.stringify(body))
+        .then((data)=>{
+          if(data){
+            message.success('登录成功!');
+            let a = sessionStorage.getItem('access_token');
+            alert(a);
+            if(data.isAdmin==1)
+              this.props.getStatus(true,true);
+            else
+              this.props.getStatus(true,false);
+            this.props.hideModal();
+
+          }
+        });
       }
     });
   }

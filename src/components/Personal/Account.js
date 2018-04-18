@@ -21,7 +21,7 @@ class Account extends React.Component{
 	 					<div>冻结金额：{this.state.fremoney}</div>
 	 				</p>
 	 			</Panel>
-	 			<Panel header={<div><Icon type="profile" />历史账单</div>} key="2">
+	 			<Panel header={<div><Icon type="profile" />历史账单</div>} key="3">
 	 				<p>
 	 					<div className={styles.setpos}>
 	 						<div><Icon type="pay-circle" />《前任3：再见前任》上海地中海影城电影票</div>
@@ -35,7 +35,7 @@ class Account extends React.Component{
 	 					</div>
 	 				</p>
 	 			</Panel>
-	 			<Panel header={<div><Icon type="red-envelope" />代金券</div>} key="3">
+	 			<Panel header={<div><Icon type="red-envelope" />代金券</div>} key="4">
 	 				<p>
 	 					<div className={styles.setpos}>
 	 						<div><Icon type="gift" />地中海影城（满25可用）</div>
@@ -49,7 +49,7 @@ class Account extends React.Component{
 	 					</div>
 	 				</p>
 	 			</Panel>
-	 			<Panel header={<div><Icon type="credit-card" />影城卡</div>} key="4">
+	 			<Panel header={<div><Icon type="credit-card" />影城卡</div>} key="5">
 	 				<p style={{paddingLeft:'24px'}}>有效期至2018年7月2日</p>
 	 			</Panel>
 	 		</Collapse>
